@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's World</title>
+  <link rel="shortcut icon" href="img/logo.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Advent+Pro:300,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/mycart.css" />
+  <script src="js/login.js" defer></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpg" alt="Men's World Logo"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="mycart.html">My Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <nav id="product-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Payment Form -->
+    <section class="payment-form">
+      <form id="payment" action="menus.html">
+        <h2>Payment Details</h2>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" required autofocus />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required />
+
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" required />
+
+        <label for="postcode">House Number</label>
+        <input id="postcode" name="postcode" type="text" required />
+
+        <h3>E-Sewa Details</h3>
+        <label for="cardnumber">E-sewa Number</label>
+        <input id="cardnumber" name="cardnumber" type="number" required />
+
+        <label for="pin">Pin of E-sewa</label>
+        <input type="password" name="pin" required />
+
+        <button type="submit">Order Now</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>PRODUCTS</h4>
+          <ul>
+            <li>T-shirts</li>
+            <li>Jeans</li>
+            <li>Shoes</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>CONTACT</h4>
+          <ul>
+            <li>Email: support@mensworld.com</li>
+            <li>Phone: +1234567890</li>
+            <li>Address: 123 Fashion St, New York, NY</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Men's World | Designed by XYZ</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    (function (d) {
+      var products = document.getElementsByClassName('product');
+      for (var i = products.length - 1; i >= 0; --i) {
+        products[i].onclick = function () {
+          var src = this.getElementsByTagName('img')[0].src;
+          document.location.href = 'demo.html#' + src;
+        }
+      }
+    })(document);
+  </script>
+</body>
+
+</html>

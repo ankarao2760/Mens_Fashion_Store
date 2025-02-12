@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's World - Register</title>
+  <link rel="shortcut icon" href="img/logo.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Advent+Pro:300,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/register.css">
+  <script src="js/registere.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpg" alt="Men's World Logo"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="mycart.html">My Cart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="form-section">
+        <h2>Register</h2>
+        <form onsubmit="return formValidation()">
+          <label for="firstname">Full Name:</label>
+          <input id="firstname" type="text" required>
+          <p id="p1"></p>
+
+          <label for="username">Username (6-8 characters):</label>
+          <input id="username" type="text" required>
+          <p id="p2"></p>
+
+          <label for="email">Email:</label>
+          <input id="email" type="email" required>
+          <p id="p3"></p>
+
+          <label for="state">State:</label>
+          <select id="state" required>
+            <option>Please Choose</option>
+            <option>America</option>
+            <option>Nepal</option>
+            <option>India</option>
+            <option>China</option>
+            <option>Spain</option>
+            <option>Singapore</option>
+            <option>Australia</option>
+            <option>Sweden</option>
+            <option>Africa</option>
+          </select>
+          <p id="p4"></p>
+
+          <label for="addr">Address:</label>
+          <input id="addr" type="text" required>
+          <p id="p5"></p>
+
+          <label for="zip">Zip Code:</label>
+          <input id="zip" type="text" required>
+          <p id="p6"></p>
+
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>PRODUCTS</h4>
+          <ul>
+            <li>T-shirts</li>
+            <li>Jeans</li>
+            <li>Shoes</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>CONTACT</h4>
+          <ul>
+            <li>Email: support@mensworld.com</li>
+            <li>Phone: +1234567890</li>
+            <li>Address: 123 Fashion St, New York, NY</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Men's World | Designed by XYZ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/formValidation.js"></script>
+</body>
+</html>
