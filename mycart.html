@@ -4,12 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Men's World</title>
+  <title>My Cart</title>
   <link rel="shortcut icon" href="img/logo.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Advent+Pro:300,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/login.css" />
   <link rel="stylesheet" href="css/mycart.css" />
-  <script src="js/login.js" defer></script>
 </head>
 
 <body>
@@ -40,34 +38,41 @@
       </ul>
     </nav>
 
-    <!-- Payment Form -->
-    <section class="payment-form">
-      <form id="payment" action="menus.html">
-        <h2>Payment Details</h2>
-        <label for="name">Full Name</label>
-        <input id="name" name="name" type="text" required autofocus />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" required />
-
-        <label for="address">Address</label>
-        <input id="address" name="address" type="text" required />
-
-        <label for="postcode">House Number</label>
-        <input id="postcode" name="postcode" type="text" required />
-
-        <h3>E-Sewa Details</h3>
-        <label for="cardnumber">E-sewa Number</label>
-        <input id="cardnumber" name="cardnumber" type="number" required />
-
-        <label for="pin">Pin of E-sewa</label>
-        <input type="password" name="pin" required />
-
-        <button type="submit">Order Now</button>
-      </form>
+    <!-- Cart Items -->
+    <section class="cart-items">
+      <h2>Your Cart</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example Cart Item -->
+          <tr>
+            <td><img src="img/product/tshirts/3.jpg" alt="Product 1"> T-shirt</td>
+            <td>$20.00</td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>$20.00</td>
+            <td><button>Remove</button></td>
+          </tr>
+          <tr>
+            <td><img src="img/product/jeans/4.jpg" alt="Product 2"> Jeans</td>
+            <td>$40.00</td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>$40.00</td>
+            <td><button>Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="cart-total">
+        <p>Total: $60.00</p>
+        <button class="checkout-button">Proceed to Checkout</button>
+      </div>
     </section>
   </main>
 
@@ -107,15 +112,15 @@
   </footer>
 
   <script type="text/javascript">
-    (function (d) {
-      var products = document.getElementsByClassName('product');
-      for (var i = products.length - 1; i >= 0; --i) {
-        products[i].onclick = function () {
-          var src = this.getElementsByTagName('img')[0].src;
-          document.location.href = 'demo.html#' + src;
-        }
-      }
-    })(document);
+    // Example script to handle remove item functionality
+    const removeButtons = document.querySelectorAll('button');
+    removeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const row = button.closest('tr');
+        row.remove();
+        // Optionally update cart total
+      });
+    });
   </script>
 </body>
 
